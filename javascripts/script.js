@@ -7,20 +7,28 @@ const image = [
 
 let position = 0;
 
-// document.querySelector(".right").addEventListener("onclick", function(){
-//     document.querySelector("img").src = "image/"+image[++position];
-//     if(position == 2) position = 0;
-// });
+let rightBtn = document.querySelector(".right");
+let leftBtn = document.querySelector(".left");
 
-function rightChange() {
+rightBtn.addEventListener('click', function(){
     if(position == 2) position = -1;
     document.querySelector("img").src = "image/"+image[++position];
-    console.log(position);
-    
-}
+});
 
-function leftChange() {
+leftBtn.addEventListener('click', function(){
     if(position == 0) position = 3;
-    document.querySelector("img").src = "image/"+image[--position];
-    console.log(position);
-}
+    document.querySelector("img").src = "image/"+image[--position];   
+});
+
+// function rightChange() {
+//     if(position == 2) position = -1;
+//     document.querySelector("img").src = "image/"+image[++position];
+//     // console.log(position);
+    
+// }
+
+// function leftChange() {
+//     if(position == 0) position = 3;
+//     document.querySelector("img").src = "image/"+image[--position];
+//     // console.log(position);
+// }
